@@ -1,0 +1,3199 @@
+Code,Smell
+"public void CodeCheck(){
+        if (n == JOptionPane.YES_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        // save as pdf
+        else {
+            sound_button.playsound();
+        }
+        for(int i=0;i<10;i++){
+            System.out.println(i);
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+            if (n == JOptionPane.YES_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // save as pdf
+            else if (n == JOptionPane.NO_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // cancel
+            else {
+                sound_button.playsound();
+            }
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+    }",1
+"public void CodeCheck(){
+    if (n == JOptionPane.YES_OPTION) {
+        sound_button.playsound();
+        save_file save_file = new save_file();
+        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+    }
+    else {
+        sound_button.playsound();
+    }
+    for(int i=0;i<10;i++){
+        System.out.println(i);
+    }
+    if (result_textarea.getText().length() > 0) {
+        save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+        savefile = new JFileChooser();
+        savefile.setDialogTitle(""Choose Directory"");
+        savefile.setSelectedFile(new File(save_filename));
+        int sf = savefile.showSaveDialog(null);
+        if (sf == JFileChooser.APPROVE_OPTION) {
+            sound_button.playsound();
+            try {
+                Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                Object defaultChoice = choices[0];
+                int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                if (n == JOptionPane.YES_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else if (n == JOptionPane.NO_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else if (n == JOptionPane.NO_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else {
+                    sound_button.playsound();
+                }
+            } catch (Exception ee) {
+                JOptionPane.showMessageDialog(null, ee);
+            }
+        } else {
+            sound_button.playsound();
+        }
+    }
+    else {
+        Object[] options = {""Ok""};
+        int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+        if (n == JOptionPane.OK_OPTION) {
+            sound_button.playsound();
+        }
+    }
+}",0
+"public void CodeCheck(){
+    if (n == JOptionPane.YES_OPTION) {
+        sound_button.playsound();
+        save_file save_file = new save_file();
+        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+    }
+    else {
+        sound_button.playsound();
+    }
+    for(int i=0;i<10;i++){
+        System.out.println(i);
+    }
+    if (result_textarea.getText().length() > 0) {
+        save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+        savefile = new JFileChooser();
+        savefile.setDialogTitle(""Choose Directory"");
+        savefile.setSelectedFile(new File(save_filename));
+        int sf = savefile.showSaveDialog(null);
+        if (sf == JFileChooser.APPROVE_OPTION) {
+            sound_button.playsound();
+            try {
+                Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                Object defaultChoice = choices[0];
+                int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                if (n == JOptionPane.YES_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else if (n == JOptionPane.NO_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else {
+                    sound_button.playsound();
+                }
+            } catch (Exception ee) {
+                JOptionPane.showMessageDialog(null, ee);
+            }
+        } else {
+            sound_button.playsound();
+        }
+    }
+    else {
+        Object[] options = {""Ok""};
+        int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+        if (n == JOptionPane.OK_OPTION) {
+            sound_button.playsound();
+        }
+    }
+}",0
+"public void LoanCalculator(){
+        if (display.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, ""Enter value"");
+
+        }
+        else {
+
+            if(checkDisplay()==true)
+            {
+                JOptionPane.showMessageDialog(null,""your input is invalid"");
+                display.setText("""");
+                result.setText("""");
+                result.setEnabled(false);
+
+            }
+
+            else{
+
+                try {
+
+                    int from_value = combo1.getSelectedIndex();
+                    int to_value = combo2.getSelectedIndex();
+                    double output;
+                    double xyz = Double.parseDouble(display.getText());
+                    if (from_value == 0) {
+                        if (to_value == 0) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 0.08333);
+                            result.setText("""" + output + ""  Foot"");
+
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * .00001578282);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 2.54);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * .0254);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.0000254);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 1) {
+                        if (to_value == 0) {
+                            output = (xyz * 12);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.000189393939);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 30.48);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 0.3048);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.0003048);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 2) {
+                        if (to_value == 0) {
+                            output = (xyz * 63364);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 5280);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 160934.4);
+                            result.setText("""" + output + ""  Centimeter"");
+
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 1609.344);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 1.609344);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 3) {
+                        if (to_value == 0) {
+                            output = (xyz * 0.393700787);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 0.032808399);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.000006214);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 0.01);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.0001);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 4) {
+                        if (to_value == 0) {
+                            output = (xyz * 39.3700787);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 3.2808399);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.0006214);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 100);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.001);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 5) {
+                        if (to_value == 0) {
+                            output = (xyz * 39370.0787);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 3280.8399);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.6214);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 10000);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 1000);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    result.setEditable(false);
+                    result.setDisabledTextColor(Color.BLACK);
+                    result.setEnabled(true);
+                }
+                catch (Exception x) {
+
+                    JOptionPane.showMessageDialog(null, ""your input is not valid"");
+                    display.setText("""");
+                    result.setText("""");
+                    result.setEnabled(false);
+                }
+            }
+        }
+    
+    }",1
+"public void analyzeData() {
+    int x = 10, y = 20, z = 30;
+    boolean condition1 = true, condition2 = false;
+
+    if (x > y) { // +1
+        System.out.println(""x > y"");
+    } else if (y > z) { // +1
+        System.out.println(""y > z"");
+    } else if (z > x) { // +1
+        System.out.println(""z > x"");
+    } else {
+        System.out.println(""None of the above"");
+    }
+
+    switch (x) { 
+        case 10: // +1
+            System.out.println(""x is 10"");
+            break;
+        case 20: // +1
+            System.out.println(""x is 20"");
+            break;
+        default: // +1
+            System.out.println(""x is something else"");
+    }
+
+    if (condition1 && condition2) { // +1
+        System.out.println(""Both conditions are true"");
+    } else if (condition1 || condition2) { // +1
+        System.out.println(""One of the conditions is true"");
+    } else {
+        System.out.println(""Both conditions are false"");
+    }
+
+    for (int i = 0; i < 5; i++) { // +1
+        System.out.println(""Iteration: "" + i);
+    }
+}
+",0
+"public void evaluateConditions() {
+    int a = 5, b = 10, c = 15;
+
+    if (a > b) { // +1
+        System.out.println(""a is greater than b"");
+    } else if (b > c) { // +1
+        System.out.println(""b is greater than c"");
+    } else if (c > a) { // +1
+        System.out.println(""c is greater than a"");
+    } else if (b > a) { // +1
+        System.out.println(""b is greater than a"");
+    }else if (c = a) { // +1
+        System.out.println(""c is equal a"");
+    } else {
+        System.out.println(""None of the above"");
+    }
+
+    switch (a) {
+        case 5: // +1
+            System.out.println(""a is 5"");
+            break;
+        case 10: // +1
+            System.out.println(""a is 10"");
+            break;
+        default: // +1
+            System.out.println(""a is something else"");
+            break;
+    }
+
+    for (int i = 0; i < 5; i++) { // +1
+        if (i % 2 == 0) { // +1
+            System.out.println(i + "" is even"");
+        } else { 
+            System.out.println(i + "" is odd"");
+        }
+    }
+
+    if (b < c && c > a) { // +1
+        System.out.println(""b < c and c > a"");
+    }
+}",0
+"public void sendEmail(String sender, String recipient, String subject, String body, 
+                          boolean isHTML, boolean includeAttachments, boolean isUrgent) {
+        
+        String emailContent = ""From: "" + sender + ""\n"" +
+                              ""To: "" + recipient + ""\n"" +
+                              ""Subject: "" + subject + ""\n"" +
+                              ""Body: "" + body + ""\n"" +
+                              ""HTML: "" + isHTML + ""\n"" +
+                              ""Include Attachments: "" + includeAttachments + ""\n"" +
+                              ""Urgent: "" + isUrgent;
+        emailStorage.put(recipient, emailContent);
+        System.out.println(""Email sent successfully to "" + recipient);
+    }",0
+"public Object[] sort(String[] FILENAME3, String[] FILENAME4, float[] matching_line_number, float[] result, int result_counter) throws IOException {
+        for (p = 0; p < result_counter; p++) {
+            for (q = p + 1; q < result_counter; q++) {
+                if (result[p] < result[q]) {
+
+                    temp = result[q];
+                    result[q] = result[p];
+                    result[p] = temp;
+
+                    temp = matching_line_number[q];
+                    matching_line_number[q] = matching_line_number[p];
+                    matching_line_number[p] = temp;
+
+                    string_temp1 = FILENAME3[q];
+                    FILENAME3[q] = FILENAME3[p];
+                    FILENAME3[p] = string_temp1;
+
+                    string_temp2 = FILENAME4[q];
+                    FILENAME4[q] = FILENAME4[p];
+                    FILENAME4[p] = string_temp2;
+                }
+            }
+        }
+        return new Object[] {FILENAME3,FILENAME4,matching_line_number,result,result_counter};
+    }",0
+"public void CodeCheck(){
+        if (n == JOptionPane.YES_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        if (n == JOptionPane.YES_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        // save as pdf
+        else if (n == JOptionPane.NO_OPTION){
+            sound_button.playsound();
+        }
+        else if (n == JOptionPane.YES_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        else {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        for(int i=0;i<10;i++){
+            System.out.println(i);
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+            if (n == JOptionPane.YES_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // save as pdf
+            else if (n == JOptionPane.NO_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // cancel
+            else {
+                sound_button.playsound();
+            }
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+    }",1
+"public void word(JButton save_button){
+        XWPFDocument Stored_Docx = new XWPFDocument(new FileInputStream(F1));
+        XWPFWordExtractor Stored_Text = new XWPFWordExtractor(Stored_Docx);
+        String Stored_String = Stored_Text.getText();
+        String[] Stored_Sentence = Stored_String.split(""[\\s]*[.][\\s]*"");
+        String[] Stored_Word = null;
+
+        //Split the stored sentence into words
+        highlight_text highlight_text = new highlight_text();
+        for (int yy = 0; yy < Stored_Sentence.length; yy++) {
+            Stored_Word = Stored_Sentence[yy].toLowerCase().split(""\\s+"");
+        }
+
+        sound_button.playsound();
+        error_counter=0;
+        Highlighter hilite = text.getHighlighter();
+        hilite.removeAllHighlights();
+
+        String input_string = text.getText();
+        //split the text into sentences
+        String[] input_sentence = input_string.split(""[\\s]*[-.,!?:)\""][\\s]*"");
+
+        for (i = 0; i < input_sentence.length; i++) {
+            //Split the sentences into words
+            String[] input_word = input_sentence[i].toLowerCase().split(""\\s+"");
+
+            for ( kk = 0; kk < input_word.length; kk++) {
+                //split the words into char
+                char[] chars = input_word[kk].toLowerCase().toCharArray();
+
+                for (int k = 0; k < chars.length; k++) {
+                    //Looking for first char of the word
+                        for (int aa = 0; aa < Alphabet.length; aa++) {
+                            if (chars[0] == Alphabet[aa]) {
+                                alphabet = Alphabet[aa];
+                                //path of stored_word files
+                                F1 = new File(""Words\\"" + Alphabet[aa] + "".docx"");
+                                Given_Word = input_word[kk];
+                                check_Correct_word(save_button);
+                            }
+
+                    }
+                }
+            }
+        }
+        //if any error remaining in Jtextarea disable save button
+        if(error_counter==0) {save_button.setEnabled(true);}
+        text.setEditable(true);
+
+        sound_button.playsound();
+
+        //Checking whether the text is not empty or not
+        if (text.getText().length() > 0) {
+
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+
+                    //Save file as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),text.getText());
+                    }
+
+                    //Save file as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),text.getText());
+
+                    } else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+
+                sound_button.playsound();
+            }
+        }
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+        
+    }",0
+"public void generateReport(String dataSource, String reportType, Date startDate, Date endDate, boolean includeSubtotals, boolean includeDetails, String fileFormat, String outputPath) {
+    List<ReportData> reportData = fetchDataFromSource(dataSource);
+    ReportContent reportContent = processReportData(reportData, reportType, startDate, endDate, includeSubtotals, includeDetails);
+    saveReport(reportContent, fileFormat, outputPath);
+}
+",0
+"public void complexMethod(int a, int b, int c, int d) {
+    if (a > 0) {   
+        if (b > 0) {   
+            for (int i = 0; i < a; i++) {   
+                if (i % 2 == 0) {   
+                    while (c > 0) {   
+                        c--;
+                        if (c == 5) {   
+                            break;
+                        }
+                    }
+                } else {
+                    switch (d) {   
+                        case 1:
+                            System.out.println(""Case 1"");  
+                            break;
+                        case 2:
+                            System.out.println(""Case 2"");  
+                            break;
+                        case 3:
+                            System.out.println(""Case 3"");  
+                            break;
+                        default:
+                            System.out.println(""Default case"");  
+                            break;
+                    }
+                }
+            }
+        } else if (b < 0) {  
+            System.out.println(""b is negative"");
+        } else {
+            System.out.println(""b is zero"");
+        }
+    } else if (a < 0) {   
+        System.out.println(""a is negative"");
+    } else if (a < 0) {   
+        System.out.println(""a is negative"");
+    } else if (a < 0) {   
+        System.out.println(""a is negative"");
+    }  else {
+        System.out.println(""a is zero"");
+    }
+
+    if (d > 10) {   
+        System.out.println(""d is greater than 10"");
+    }
+}
+",0
+"public void CodeCheck(){
+        if (n == JOptionPane.NO_OPTION){
+            sound_button.playsound();
+        }
+        else if (n == JOptionPane.YES_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        else {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        for(int i=0;i<10;i++){
+            System.out.println(i);
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+            if (n == JOptionPane.YES_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // save as pdf
+            else if (n == JOptionPane.NO_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // cancel
+            else {
+                sound_button.playsound();
+            }
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+    }",1
+" public void oddEvenMethod(int a, int b, int c, int[] arr) {
+
+        if (a > 0) {  
+            if (b > 0) { 
+                for (int i = 0; i < arr.length; i++) {  
+                    if (arr[i] % 2 == 0) {   
+                        System.out.println(""Even number: "" + arr[i]);
+                    } else {
+                        System.out.println(""Odd number: "" + arr[i]);
+                    }
+                }
+            } else {
+                while (c > 0) { 
+                    c--;
+                    if (c == 2) {  
+                        System.out.println(""C is 2"");
+                    }
+                }
+            }
+        } else {
+            try {  
+                if (a == 0) {  
+                    throw new Exception(""A is zero"");
+                }
+            } catch (Exception e) {  
+                System.out.println(e.getMessage());
+            } finally {
+                if (b == 0) {  
+                    System.out.println(""B is zero"");
+                }
+            }
+
+            if (c < 0) {  
+                System.out.println(""C is negative"");
+            }
+            if (c > 0) {  
+                System.out.println(""C is positive"");
+            }
+        }
+
+        if (a + b + c > 10) {  
+            System.out.println(""Sum is greater than 10"");
+        }
+    }",0
+"public void Calculator(){
+        if (display.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, ""Enter value"");
+
+        }
+        else {
+
+            if(checkDisplay()==true)
+            {
+                JOptionPane.showMessageDialog(null,""your input is invalid"");
+                display.setText("""");
+                result.setText("""");
+                result.setEnabled(false);
+
+            }
+
+            else{
+
+                try {
+
+                    int from_value = combo1.getSelectedIndex();
+                    int to_value = combo2.getSelectedIndex();
+                    double output;
+                    double xyz = Double.parseDouble(display.getText());
+                    if (from_value == 0) {
+                        if (to_value == 0) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 0.08333);
+                            result.setText("""" + output + ""  Foot"");
+
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * .00001578282);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 2.54);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * .0254);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.0000254);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 2) {
+                        if (to_value == 0) {
+                            output = (xyz * 63364);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 5280);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 160934.4);
+                            result.setText("""" + output + ""  Centimeter"");
+
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 1609.344);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 1.609344);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 3) {
+                        if (to_value == 0) {
+                            output = (xyz * 0.393700787);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 0.032808399);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.000006214);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 0.01);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.0001);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 4) {
+                        if (to_value == 0) {
+                            output = (xyz * 39.3700787);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 3.2808399);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.0006214);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 100);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 0.001);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    else if (from_value == 5) {
+                        if (to_value == 0) {
+                            output = (xyz * 39370.0787);
+                            result.setText("""" + output + ""  Inch"");
+                        }
+                        if (to_value == 1) {
+                            output = (xyz * 3280.8399);
+                            result.setText("""" + output + ""  Foot"");
+                        }
+                        if (to_value == 2) {
+                            output = (xyz * 0.6214);
+                            result.setText("""" + output + ""  Mile"");
+                        }
+                        if (to_value == 3) {
+                            output = (xyz * 10000);
+                            result.setText("""" + output + ""  Centimeter"");
+                        }
+                        if (to_value == 4) {
+                            output = (xyz * 1000);
+                            result.setText("""" + output + ""  Meter"");
+                        }
+                        if (to_value == 5) {
+                            output = (xyz * 1);
+                            result.setText("""" + output + ""  Kilometer"");
+                        }
+                    }
+                    result.setEditable(false);
+                    result.setDisabledTextColor(Color.BLACK);
+                    result.setEnabled(true);
+                }
+                catch (Exception x) {
+
+                    JOptionPane.showMessageDialog(null, ""your input is not valid"");
+                    display.setText("""");
+                    result.setText("""");
+                    result.setEnabled(false);
+                }
+            }
+        }
+    
+    }",1
+"public boolean isHappy(int number) {
+        
+        int sum=0;
+        while(number!=1 && number!=4)
+        {
+           
+            while(number>0)
+            {
+                int rem=number%10;
+                sum+=(rem*rem);
+                number=number/10;
+                
+            }
+            number=sum;
+            sum=0;
+        }
+        if(number==1)
+            return true;
+        return false;
+    }",0
+"public void complexMethod(int a, int b, int c, int d, int e, int f, int g) {
+        for (int j = 0; j < f; j++) { // +1
+            if (g > 0) { // +1
+                System.out.println(""Loop iteration "" + j);
+            } else { // +1
+                System.out.println(""Negative g"");
+            }
+        }
+        if (a > 0) { // +1
+            if (b > 0) { // +1
+                System.out.println(""Branch 1"");
+            } else if (c > 0) { // +1
+                System.out.println(""Branch 2"");
+            }
+            else if (d > 0) { // +1
+                System.out.println(""Branch 3"");
+            }
+            else if (e > 0) { // +1
+                System.out.println(""Branch 4"");
+            }
+            else { // +1
+                System.out.println(""Branch 5"");
+            }
+        } else if (d > 0) { // +1
+            switch (e) {
+                case 1: // +1
+                    System.out.println(""Case 1"");
+                    break;
+                case 2: // +1
+                    System.out.println(""Case 2"");
+                    break;
+                case 3: // +1
+                    System.out.println(""Case 3"");
+                    break;
+                default: // +1
+                    System.out.println(""Default case"");
+                    break;
+            }
+        } else { // +1
+            for (int i = 0; i < f; i++) { // +1
+                if (g > 0) { // +1
+                    System.out.println(""Loop iteration "" + i);
+                } else if (g = 0){ // +1
+                    System.out.println(""null"");
+                } else { // +1
+                    System.out.println(""Negative g"");
+                }
+            }
+        }
+
+        while (a > 0) { // +1
+            if (b > 0) { // +1
+                a--;
+            } else { // +1
+                break;
+            }
+        }
+
+        do { // +1
+            System.out.println(""In do-while loop"");
+            a--;
+        } while (a > 0 && b > 0); // +1
+    }",1
+"public boolean isHappy(int number) {
+        Set<Integer> seen = new HashSet<>();
+        while (number != 1) {
+            int sum = 0;
+            while (number > 0) {
+                int digit = number % 10;
+                sum += digit * digit;
+                number /= 10;
+            }
+            if (seen.contains(sum)) {
+                return false; 
+            }
+            seen.add(sum);
+            number = sum;
+        }
+        return true;
+    }",0
+"  public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode reversedHead = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return reversedHead;
+    }",0
+"public boolean containsDuplicate(int[] nums) {
+        Set<Integer> uniqueElements = new HashSet<>();
+
+        for (int num : nums) {
+            if (uniqueElements.contains(num))
+                return true; 
+            uniqueElements.add(num);
+        }
+        return false; 
+    }",0
+"  public boolean empty() {
+        return queue1.isEmpty() && queue2.isEmpty();
+    }",0
+"public void GreaterNumber(int a, int b, int c, int d, int e, int f, int g) {
+        for (int j = 0; j < f; j++) { // +1
+            if (g > 0) { // +1
+                System.out.println(""Loop iteration "" + j);
+            } else { // +1
+                System.out.println(""Negative g"");
+            }
+        }
+        
+        if (a > 0) { // +1
+            if (b > 0) { // +1
+                System.out.println(""Branch 1"");
+            } else if (c > 0) { // +1
+                System.out.println(""Branch 2"");
+            }
+            else if (d > 0) { // +1
+                System.out.println(""Branch 3"");
+            }
+            else if (e > 0) { // +1
+                System.out.println(""Branch 4"");
+            }
+            else { // +1
+                System.out.println(""Branch 5"");
+            }
+        } else if (d > 0) { // +1
+            switch (e) {
+                case 1: // +1
+                    System.out.println(""Case 1"");
+                    break;
+                case 2: // +1
+                    System.out.println(""Case 2"");
+                    break;
+                case 3: // +1
+                    System.out.println(""Case 3"");
+                    break;
+                case 4: // +1
+                    System.out.println(""Case 4"");
+                    break;    
+                default: // +1
+                    System.out.println(""Default case"");
+                    break;
+            }
+        } else { // +1
+            for (int i = 0; i < f; i++) { // +1
+                if (g > 0) { // +1
+                    System.out.println(""Loop iteration "" + i);
+                } else { // +1
+                    System.out.println(""Negative g"");
+                }
+            }
+        }
+        for (int j = 0; j < f; j++) { // +1
+            if (g > 0) { // +1
+                System.out.println(""Loop iteration "" + j);
+            } else { // +1
+                System.out.println(""Negative g"");
+            }
+        }
+
+        while (a > 0) { // +1
+            if (b > 0) { // +1
+                a--;
+            } else { // +1
+                break;
+            }
+        }
+
+        do { // +1
+            System.out.println(""In do-while loop"");
+            a--;
+        } while (a > 0 && b > 0); // +1
+    }",1
+" public int countNodes(TreeNode root) {
+        if (root == null) return 0;
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        if (leftHeight == rightHeight) {
+            return (1 << leftHeight) + countNodes(root.right);
+        } else {
+            return (1 << rightHeight) + countNodes(root.left);
+        }
+    }",0
+"public void LoanCalculator(){
+        if(amounttext.getText().isEmpty() || interesttext.getText().isEmpty() ||  monthtext.getText().isEmpty() ){
+            JOptionPane.showMessageDialog(null,""Enter all value"");
+        }
+
+        else {
+            if(checkMonth()==true && checkLoan()==false && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Month input is invalid"");
+                monthtext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan input is invalid"");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest input is invalid"");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==true && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan & Month input is invalid"");
+                monthtext.setText("""");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==true && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest & Month input is invalid"");
+                monthtext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Loan & Interest input is invalid"");
+                amounttext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+            else if(checkMonth()==true && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest & Month input is invalid"");
+                monthtext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Loan & Interest input is invalid"");
+                amounttext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan input is invalid"");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest input is invalid"");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==true && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan & Month input is invalid"");
+                monthtext.setText("""");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+            else if(amounttext.getText().isEmpty() || interesttext.getText().isEmpty() ||  monthtext.getText().isEmpty() ){
+                JOptionPane.showMessageDialog(null,""Enter all value"");
+            }
+
+            else if(checkMonth()==true && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest & Month input is invalid"");
+                monthtext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Loan & Interest input is invalid"");
+                amounttext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else{
+                try {
+                    if(amounttext.getText().isEmpty() || interesttext.getText().isEmpty() ||  monthtext.getText().isEmpty() ){
+                        JOptionPane.showMessageDialog(null,""Enter all value"");
+                    }
+                    double totalamount = 0;
+                    double Loan_Amount = Double.parseDouble(amounttext.getText());
+                    double Interest_Rate = Double.parseDouble(interesttext.getText());
+                    double Month = Double.parseDouble(monthtext.getText());
+
+                    totalamount = Loan_Amount + Loan_Amount * Interest_Rate / 100;
+                    totaltext.setText(String.valueOf(totalamount));
+
+                    double payment_per_month = 0;
+                    payment_per_month = (totalamount / Month);
+                    paymenttext.setText(String.valueOf(payment_per_month));
+
+                    totaltext.setEnabled(true);
+                    paymenttext.setEnabled(true);
+                    totaltext.setEditable(false);
+                    paymenttext.setEditable(false);
+                }
+                catch (Exception e1){
+
+                    JOptionPane.showMessageDialog(null, ""your input is not valid"");
+                    totaltext.setText("""");
+                    paymenttext.setText("""");
+                    amounttext.setText("""");
+                    interesttext.setText("""");
+                    monthtext.setText("""");
+                }
+            }
+        }
+    
+    }",1
+"private int height(TreeNode node) {
+        int height = 0;
+        while (node != null) {
+            height++;
+            node = node.left;
+        }
+        return height;
+    }",0
+"  public boolean containsNearbyDuplicate(int[] nums, int number) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int loopIterature = 0; loopIterature < nums.length; loopIterature++) {
+            if (map.containsKey(nums[loopIterature]) && Math.abs(loopIterature - map.get(nums[loopIterature])) <= number) {
+                return true;
+            }
+            map.put(nums[loopIterature], loopIterature);
+        }
+        return false;
+    }",0
+" public boolean containsNearbyDuplicate(int[] nums, int number) {
+         
+        HashMap<Integer,Integer> map = new HashMap<>();
+    
+        for( int loopIterature = 0; loopIterature < nums.length; loopIterature++){
+            if(map.containsKey(nums[loopIterature])){            
+                if( loopIterature - map.get(nums[loopIterature]) <= number ){
+                    return true;
+                }
+            } 
+            map.put(nums[loopIterature] , loopIterature);
+        }
+ 
+        return false;
+        
+    }",0
+"public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            if (set.contains(num)) {
+                return true;
+            }
+            set.add(num);
+        }
+        return false;
+    }",0
+"public void calculateComplexity(int x, int y) {
+        for (int i = 0; i < x; i++) { // 1
+            if (i % 2 == 0) { // 2
+                System.out.println(""Even"");
+            } else { // 3
+                System.out.println(""Odd"");
+            }
+
+            switch (y) {
+                case 1: // 4
+                    System.out.println(""Case 1"");
+                    break;
+                case 2: // 5
+                    System.out.println(""Case 2"");
+                    break;
+                case 3: // 6
+                    System.out.println(""Case 3"");
+                    break;
+                default: // 7
+                    System.out.println(""Default case"");
+                    break;
+            }
+
+            if (x > y) { // 8
+                System.out.println(""x is greater than y"");
+            } else if (x < y) { // 9
+                System.out.println(""x is less than y"");
+            } else { // 10
+                System.out.println(""x is equal to y"");
+            }
+        }
+
+        if (x == y) { // 11
+            System.out.println(""x and y are equal"");
+        }
+    }",0
+"public void CodeTextCheck(){
+    if (n == JOptionPane.YES_OPTION) {
+        sound_button.playsound();
+        save_file save_file = new save_file();
+        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+    }
+    else {
+        sound_button.playsound();
+    }
+    for(int i=0;i<10;i++){
+        System.out.println(i);
+    }
+    if (result_textarea.getText().length() > 0) {
+        save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+        savefile = new JFileChooser();
+        savefile.setDialogTitle(""Choose Directory"");
+        savefile.setSelectedFile(new File(save_filename));
+        int sf = savefile.showSaveDialog(null);
+        if (sf == JFileChooser.APPROVE_OPTION) {
+            sound_button.playsound();
+            try {
+                Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                Object defaultChoice = choices[0];
+                int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                if (n == JOptionPane.YES_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else if (n == JOptionPane.NO_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else if (n == JOptionPane.Default_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else if (n == JOptionPane.NO_OPTION) {
+                    sound_button.playsound();
+                    save_file save_file = new save_file();
+                    save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                }
+                else {
+                    sound_button.playsound();
+                }
+            } catch (Exception ee) {
+                JOptionPane.showMessageDialog(null, ee);
+            }
+        } else {
+            sound_button.playsound();
+        }
+    }
+    else {
+        Object[] options = {""Ok""};
+        int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+        if (n == JOptionPane.OK_OPTION) {
+            sound_button.playsound();
+        }
+    }
+}",0
+"public void addNumber(int num1, int num2, int num3){ 
+ return (num1+num2+num3)
+;
+}",0
+"public static void Order(int orderAmount, int customerLoyaltyPoints, String customerType, boolean isHolidaySeason, String shippingOption, String paymentMethod, int itemsCount) {
+        if (orderAmount <= 0) {
+            System.out.println(""Invalid order amount."");
+            return;
+        } else if (orderAmount > 10000) {
+            System.out.println(""Large order detected."");
+        }
+
+        if (isHolidaySeason) {
+            System.out.println(""Holiday season discount applied."");
+            orderAmount *= 0.9;
+        }
+
+        if (customerType.equals(""VIP"")) {
+            System.out.println(""VIP customer. Special discount applied."");
+            orderAmount *= 0.85;
+            if (shippingOption.equals(""overnight"")) {
+                System.out.println(""Free overnight shipping for VIPs."");
+            }
+        } else if (customerType.equals(""Regular"")) {
+            if (shippingOption.equals(""express"")) {
+                System.out.println(""Express shipping selected. Additional charge applied."");
+                orderAmount += 30;
+            } else if (shippingOption.equals(""standard"")) {
+                System.out.println(""Standard shipping selected."");
+            } else {
+                System.out.println(""Invalid shipping option. Defaulting to standard."");
+            }
+        } else if (customerType.equals(""New"")) {
+            System.out.println(""New customer discount applied."");
+            orderAmount *= 0.95;
+            if (paymentMethod.equals(""credit_card"")) {
+                System.out.println(""Credit card payment selected. Extra points awarded."");
+            } else if (paymentMethod.equals(""paypal"")) {
+                System.out.println(""PayPal payment selected."");
+            } else if (paymentMethod.equals(""gift_card"")) {
+                System.out.println(""Gift card payment selected. Gift card limit applied."");
+                if (orderAmount > 500) {
+                    System.out.println(""Gift card limit exceeded. Adjusting order amount."");
+                    orderAmount = 500;
+                }
+            } else {
+                System.out.println(""Invalid payment method. Defaulting to credit card."");
+            }
+        } else {
+            System.out.println(""Unrecognized customer type."");
+        }
+
+        switch (shippingOption) {
+            case ""standard"":
+                System.out.println(""Processing with standard shipping."");
+                break;
+            case ""express"":
+                System.out.println(""Processing with express shipping."");
+                orderAmount += 20;
+                break;
+            case ""overnight"":
+                System.out.println(""Processing with overnight shipping."");
+                orderAmount += 50;
+                break;
+            default:
+                System.out.println(""Invalid shipping option. Using standard shipping."");
+                break;
+        }
+
+        for (int i = 0; i < itemsCount; i++) {
+            if (i % 2 == 0) {
+                System.out.println(""Processing even item: "" + (i + 1));
+            } else {
+                System.out.println(""Processing odd item: "" + (i + 1));
+            }
+
+            if (i == itemsCount / 2) {
+                System.out.println(""Halfway through processing items."");
+            }
+
+            if (i > 0 && i % 10 == 0) {
+                System.out.println(""Milestone reached: Processed "" + i + "" items."");
+            }
+        }
+
+        if (orderAmount > 1000) {
+            System.out.println(""High order amount. Final verification required."");
+        } else if (orderAmount < 50) {
+            System.out.println(""Low order amount. Extra shipping charges apply."");
+            orderAmount += 10;
+        }
+
+        System.out.println(""Final order amount: $"" + orderAmount);
+    }",1
+"public void addNumber(int num1, int num2, int num3, int num4){ 
+ return (num1+num2+num3+num4)
+;
+}",0
+"public void CheckNumber() {
+    int a = 5, b = 10, c = 15;
+
+    if (a > b) { // +1
+        System.out.println(""a is greater than b"");
+    } else if (b > c) { // +1
+        System.out.println(""b is greater than c"");
+    } else if (c > a) { // +1
+        System.out.println(""c is greater than a"");
+    } else if (b > a) { // +1
+        System.out.println(""b is greater than a"");
+    }else if (c = a) { // +1
+        System.out.println(""c is equal a"");
+    } else {
+        System.out.println(""None of the above"");
+    }
+
+    switch (a) {
+        case 5: // +1
+            System.out.println(""a is 5"");
+            break;
+        case 10: // +1
+            System.out.println(""a is 10"");
+            break;
+        default: // +1
+            System.out.println(""a is something else"");
+            break;
+    }
+
+    for (int i = 0; i < 5; i++) { // +1
+        if (i % 2 == 0) { // +1
+            System.out.println(i + "" is even"");
+        } else { 
+            System.out.println(i + "" is odd"");
+        }
+    }
+
+    if (b < c && c > a) { // +1
+        System.out.println(""b < c and c > a"");
+    }
+    else if (a < c && c > b) { // +1
+        System.out.println(""a < c and c > b"");
+    }
+    else if (b < a && a > c) { // +1
+        System.out.println(""b < a and a > c"");
+    }
+    else{
+      System.out.println(""c < a and a > b"");
+    }
+}",0
+"public void calculate(int[] numbers, int threshold) {
+        int sum = 0;
+        boolean isThresholdCrossed = false;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) { 
+                sum += numbers[i];
+            }
+
+            if (numbers[i] > threshold) { 
+                isThresholdCrossed = true;
+            }
+            if (numbers[i] < threshold) { 
+                isThresholdCrossed = true;
+            }
+
+            if (numbers[i] % 2 == 0) { 
+                if (numbers[i] % 3 == 0) { 
+                    sum += numbers[i] * 2;
+                }
+            }
+        }
+        while (sum < threshold && !isThresholdCrossed) { 
+            sum += 10;
+            if (sum > threshold) { 
+                isThresholdCrossed = true;
+            }
+
+            if (sum % 2 == 0) { 
+                sum /= 2;
+            }
+        }
+
+        for (int j = 0; j < numbers.length; j++) { 
+            if (numbers[j] > threshold) { 
+                sum -= numbers[j];
+            } else if (numbers[j] < 0) {
+                sum += Math.abs(numbers[j]);
+            }
+
+            if (numbers[j] % 5 == 0) { 
+                sum += numbers[j];
+            }
+        }
+
+        if (sum > threshold) { 
+            sum -= threshold;
+        } 
+
+        System.out.println(""Final sum: "" + sum);
+    }",0
+"public static void processOrder(int orderAmount, int customerLoyaltyPoints, String customerType, boolean isHolidaySeason, String shippingOption, String paymentMethod, int itemsCount) {
+        if (orderAmount <= 0) {
+            System.out.println(""Invalid order amount."");
+            return;
+        } else if (orderAmount > 10000) {
+            System.out.println(""Large order detected."");
+        }
+
+        if (customerType.equals(""VIP"")) {
+            System.out.println(""VIP customer. Special discount applied."");
+            orderAmount *= 0.85;
+            if (shippingOption.equals(""overnight"")) {
+                System.out.println(""Free overnight shipping for VIPs."");
+            }
+        } else if (customerType.equals(""Regular"")) {
+            if (shippingOption.equals(""express"")) {
+                System.out.println(""Express shipping selected. Additional charge applied."");
+                orderAmount += 30;
+            }  else {
+                System.out.println(""Invalid shipping option. Defaulting to standard."");
+            }
+        } else if (customerType.equals(""New"")) {
+            System.out.println(""New customer discount applied."");
+            orderAmount *= 0.95;
+            if (paymentMethod.equals(""credit_card"")) {
+                System.out.println(""Credit card payment selected. Extra points awarded."");
+            } else if (paymentMethod.equals(""paypal"")) {
+                System.out.println(""PayPal payment selected."");
+            } else if (paymentMethod.equals(""gift_card"")) {
+                System.out.println(""Gift card payment selected. Gift card limit applied."");
+                if (orderAmount > 500) {
+                    System.out.println(""Gift card limit exceeded. Adjusting order amount."");
+                    orderAmount = 500;
+                }
+            } else {
+                System.out.println(""Invalid payment method. Defaulting to credit card."");
+            }
+        } else {
+            System.out.println(""Unrecognized customer type."");
+        }
+
+        switch (shippingOption) {
+            case ""standard"":
+                System.out.println(""Processing with standard shipping."");
+                break;
+            case ""express"":
+                System.out.println(""Processing with express shipping."");
+                orderAmount += 20;
+                break;
+            case ""overnight"":
+                System.out.println(""Processing with overnight shipping."");
+                orderAmount += 50;
+                break;
+            default:
+                System.out.println(""Invalid shipping option. Using standard shipping."");
+                break;
+        }
+
+        for (int i = 0; i < itemsCount; i++) {
+            if (i % 2 == 0) {
+                System.out.println(""Processing even item: "" + (i + 1));
+            } else {
+                System.out.println(""Processing odd item: "" + (i + 1));
+            }
+
+            if (i == itemsCount / 2) {
+                System.out.println(""Halfway through processing items."");
+            }
+
+            if (i > 0 && i % 10 == 0) {
+                System.out.println(""Milestone reached: Processed "" + i + "" items."");
+            }
+        }
+
+        if (orderAmount > 1000) {
+            System.out.println(""High order amount. Final verification required."");
+        } else if (orderAmount < 50) {
+            System.out.println(""Low order amount. Extra shipping charges apply."");
+            orderAmount += 10;
+        }
+
+        System.out.println(""Final order amount: $"" + orderAmount);
+    }",1
+"public void calculate(int[] numbers, int threshold) {
+        int sum = 0;
+        boolean isThresholdCrossed = false;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 0) { 
+                sum += numbers[i];
+            }
+
+            if (numbers[i] > threshold) { 
+                isThresholdCrossed = true;
+            }
+
+            // Nested if with two conditions: Complexity +2
+            if (numbers[i] % 2 == 0) { 
+                if (numbers[i] % 3 == 0) { 
+                    sum += numbers[i] * 2;
+                }
+            }
+        }
+        while (sum < threshold && !isThresholdCrossed) { 
+            sum += 10;
+            if (sum > threshold) { 
+                isThresholdCrossed = true;
+            }
+
+            if (sum % 2 == 0) { 
+                sum /= 2;
+            }
+        }
+
+        for (int j = 0; j < numbers.length; j++) { 
+            if (numbers[j] > threshold) { 
+                sum -= numbers[j];
+            } else if (numbers[j] < 0) {
+                sum += Math.abs(numbers[j]);
+            }
+
+            if (numbers[j] % 5 == 0) { 
+                sum += numbers[j];
+            }
+        }
+
+        // Final if-else ladder to reach 13
+        if (sum > threshold) { 
+            sum -= threshold;
+        } else if (sum < threshold / 2) { 
+            sum += threshold / 2;
+        } else { 
+            sum *= 2;
+        }
+
+        System.out.println(""Final sum: "" + sum);
+    }",0
+"public void addNumber(int num1, int num2, int num3, int num4, int num5, int num6, int num7, int num8, int num9){ 
+ return (num1+num2+num3+num4+num5+num6+num7+num8+num9);
+}",0
+"public void complexMethod(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l, int m, int n, int o) {
+        if (a > 0) {
+            if (b > 0) {
+                if (c > 0) {
+                    if (d > 0) {
+                        System.out.println(""All conditions met"");
+                    } else {
+                        System.out.println(""Condition d not met"");
+                    }
+                } else {
+                    System.out.println(""Condition c not met"");
+                }
+            } else {
+                System.out.println(""Condition b not met"");
+            }
+        } else {
+            System.out.println(""Condition a not met"");
+        }
+
+        switch (e) {
+            case 1:
+                System.out.println(""e is 1"");
+                break;
+            case 2:
+                System.out.println(""e is 2"");
+                break;
+            default:
+                System.out.println(""e is neither 1 nor 2"");
+        }
+
+        for (int i1 = 0; i1 < f; i1++) {
+            if (g > 0) {
+                if (h > 0) {
+                    System.out.println(""g and h are positive"");
+                }
+            }
+        }
+
+        while (i > 0) {
+            if (j > 0) {
+                if (k > 0) {
+                    System.out.println(""j and k are positive"");
+                } else {
+                    System.out.println(""k is not positive"");
+                }
+            } else {
+                System.out.println(""j is not positive"");
+            }
+            i--;
+        }
+
+        try {
+            if (l > 0) {
+                throw new Exception(""Exception thrown"");
+            }
+        } catch (Exception ex) {
+            System.out.println(""Exception caught"");
+        } finally {
+            System.out.println(""Finally block executed"");
+        }
+
+        switch (m) {
+            case 1:
+                System.out.println(""m is 1"");
+                break;
+            case 2:
+                System.out.println(""m is 2"");
+                break;
+            default:
+                System.out.println(""m is neither 1 nor 2"");
+        }
+
+        if (n > 0) {
+            System.out.println(""n is positive"");
+        } else if (o > 0) {
+            System.out.println(""o is positive"");
+        } else {
+            System.out.println(""n and o are non-positive"");
+        }
+    }",1
+"public void anotherComplexMethod(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l, int m, int n, int o, int p) {
+        // Conditionals
+        if (a > 0) {
+            if (b > 0) {
+                if (c > 0) {
+                    if (d > 0) {
+                        System.out.println(""All initial conditions met"");
+                    } else {
+                        System.out.println(""Condition d not met"");
+                    }
+                } else {
+                    System.out.println(""Condition c not met"");
+                }
+            } else {
+                System.out.println(""Condition b not met"");
+            }
+        } else {
+            System.out.println(""Condition a not met"");
+        }
+
+        // Switch statement
+        switch (e) {
+            case 1:
+                System.out.println(""e is 1"");
+                break;
+            case 2:
+                System.out.println(""e is 2"");
+                break;
+            case 3:
+                System.out.println(""e is 3"");
+                break;
+            default:
+                System.out.println(""e is not 1, 2, or 3"");
+                break;
+        }
+
+        // For loop with nested conditionals
+        for (int i1 = 0; i1 < f; i1++) {
+            if (g > 0) {
+                if (h > 0) {
+                    System.out.println(""g and h are positive"");
+                } else {
+                    System.out.println(""h is not positive"");
+                }
+            } else {
+                System.out.println(""g is not positive"");
+            }
+        }
+
+        // While loop with nested conditionals
+        while (i > 0) {
+            if (j > 0) {
+                if (k > 0) {
+                    System.out.println(""j and k are positive"");
+                } else {
+                    System.out.println(""k is not positive"");
+                }
+            } else {
+                System.out.println(""j is not positive"");
+            }
+            i--;
+        }
+
+        // Try-catch-finally block
+        try {
+            if (l > 0) {
+                if (m > 0) {
+                    throw new Exception(""Exception thrown"");
+                } else {
+                    System.out.println(""l is positive but m is not"");
+                }
+            } else {
+                System.out.println(""l is not positive"");
+            }
+        } catch (Exception ex) {
+            System.out.println(""Exception caught: "" + ex.getMessage());
+        } finally {
+            System.out.println(""Finally block executed"");
+        }
+
+        // Switch statement with nested conditionals
+        switch (n) {
+            case 1:
+                if (o > 0) {
+                    System.out.println(""n is 1 and o is positive"");
+                } else {
+                    System.out.println(""n is 1 but o is not positive"");
+                }
+                break;
+            case 2:
+                if (p > 0) {
+                    System.out.println(""n is 2 and p is positive"");
+                } else {
+                    System.out.println(""n is 2 but p is not positive"");
+                }
+                break;
+            default:
+                System.out.println(""n is neither 1 nor 2"");
+                break;
+        }
+
+        // Multiple nested conditionals
+        if (a > 0) {
+            if (b > 0) {
+                if (c > 0) {
+                    if (d > 0) {
+                        if (e > 0) {
+                            System.out.println(""All conditions met"");
+                        } else {
+                            System.out.println(""Condition e not met"");
+                        }
+                    } else {
+                        System.out.println(""Condition d not met"");
+                    }
+                } else {
+                    System.out.println(""Condition c not met"");
+                }
+            } else {
+                System.out.println(""Condition b not met"");
+            }
+        } else {
+            System.out.println(""Condition a not met"");
+        }
+    }",1
+"public void check_Correct_word(JButton save_button){
+        try{
+            sound_button.playsound();
+            error_counter=0;
+            Highlighter hilite = text.getHighlighter();
+            hilite.removeAllHighlights();
+
+            String input_string = text.getText();
+            //split the text into sentences
+            String[] input_sentence = input_string.split(""[\\s]*[-.,!?:)\""][\\s]*"");
+
+            for (i = 0; i < input_sentence.length; i++) {
+                //Split the sentences into words
+                String[] input_word = input_sentence[i].toLowerCase().split(""\\s+"");
+
+                for ( kk = 0; kk < input_word.length; kk++) {
+                    //split the words into char
+                    char[] chars = input_word[kk].toLowerCase().toCharArray();
+
+                    for (int k = 0; k < chars.length; k++) {
+                        if (k == 0) {
+                            for (int aa = 0; aa < Alphabet.length; aa++) {
+                                if (chars[0] == Alphabet[aa]) {
+                                    alphabet = Alphabet[aa];
+                                    //path of stored_word files
+                                    F1 = new File(""Words\\"" + Alphabet[aa] + "".docx"");
+                                    Given_Word = input_word[kk];
+                                    check_Correct_word(save_button);
+                                }
+                            }
+                        }
+                        //Looking for first char of the word
+                        if (k == 0) {
+                            for (int aa = 0; aa < Alphabet.length; aa++) {
+                                if (chars[0] == Alphabet[aa]) {
+                                    alphabet = Alphabet[aa];
+                                    //path of stored_word files
+                                    F1 = new File(""Words\\"" + Alphabet[aa] + "".docx"");
+                                    Given_Word = input_word[kk];
+                                    check_Correct_word(save_button);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //if any error remaining in Jtextarea disable save button
+            if(error_counter>0){
+                save_button.setEnabled(false);
+            }
+            else if(error_counter==0) {save_button.setEnabled(true);}
+            text.setEditable(true);
+            XWPFDocument Stored_Docx = new XWPFDocument(new FileInputStream(F1));
+            XWPFWordExtractor Stored_Text = new XWPFWordExtractor(Stored_Docx);
+            String Stored_String = Stored_Text.getText();
+            String[] Stored_Sentence = Stored_String.split(""[\\s]*[.][\\s]*"");
+            String[] Stored_Word = null;
+
+            //Split the stored sentence into words
+            highlight_text highlight_text = new highlight_text();
+            for (int yy = 0; yy < Stored_Sentence.length; yy++) {
+                Stored_Word = Stored_Sentence[yy].toLowerCase().split(""\\s+"");
+            }
+
+            //Highlighting wrong word
+            if (Collections.binarySearch(Arrays.asList(Stored_Word),Given_Word)< 0) {
+                error_counter++;
+                highlight_text.highlight(text,Given_Word);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }",1
+"public void check_word(JButton save_button){
+        XWPFDocument Stored_Docx = new XWPFDocument(new FileInputStream(F1));
+        XWPFWordExtractor Stored_Text = new XWPFWordExtractor(Stored_Docx);
+        String Stored_String = Stored_Text.getText();
+        String[] Stored_Sentence = Stored_String.split(""[\\s]*[.][\\s]*"");
+        String[] Stored_Word = null;
+
+        //Split the stored sentence into words
+        highlight_text highlight_text = new highlight_text();
+        for (int yy = 0; yy < Stored_Sentence.length; yy++) {
+            Stored_Word = Stored_Sentence[yy].toLowerCase().split(""\\s+"");
+        }
+
+        //Highlighting wrong word
+        if (Collections.binarySearch(Arrays.asList(Stored_Word),Given_Word)< 0) {
+            error_counter++;
+            highlight_text.highlight(text,Given_Word);
+        }
+
+        sound_button.playsound();
+        error_counter=0;
+        Highlighter hilite = text.getHighlighter();
+        hilite.removeAllHighlights();
+
+        String input_string = text.getText();
+        //split the text into sentences
+        String[] input_sentence = input_string.split(""[\\s]*[-.,!?:)\""][\\s]*"");
+
+        for (i = 0; i < input_sentence.length; i++) {
+            //Split the sentences into words
+            String[] input_word = input_sentence[i].toLowerCase().split(""\\s+"");
+
+            for ( kk = 0; kk < input_word.length; kk++) {
+                //split the words into char
+                char[] chars = input_word[kk].toLowerCase().toCharArray();
+
+                for (int k = 0; k < chars.length; k++) {
+                    //Looking for first char of the word
+                    if (k == 0) {
+                        for (int aa = 0; aa < Alphabet.length; aa++) {
+                            if (chars[0] == Alphabet[aa]) {
+                                alphabet = Alphabet[aa];
+                                //path of stored_word files
+                                F1 = new File(""Words\\"" + Alphabet[aa] + "".docx"");
+                                Given_Word = input_word[kk];
+                                check_Correct_word(save_button);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //if any error remaining in Jtextarea disable save button
+        if(error_counter>0){
+            save_button.setEnabled(false);
+        }
+        else if(error_counter==0) {save_button.setEnabled(true);}
+        text.setEditable(true);
+
+        sound_button.playsound();
+
+        //Checking whether the text is not empty or not
+        if (text.getText().length() > 0) {
+
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+
+                    //Save file as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),text.getText());
+                    }
+
+                    //Save file as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),text.getText());
+
+                    } else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+
+                sound_button.playsound();
+            }
+        }
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+        
+    }",1
+"public void word(JButton save_button){
+        XWPFDocument Stored_Docx = new XWPFDocument(new FileInputStream(F1));
+        XWPFWordExtractor Stored_Text = new XWPFWordExtractor(Stored_Docx);
+        String Stored_String = Stored_Text.getText();
+        String[] Stored_Sentence = Stored_String.split(""[\\s]*[.][\\s]*"");
+        String[] Stored_Word = null;
+
+        //Split the stored sentence into words
+        highlight_text highlight_text = new highlight_text();
+        for (int yy = 0; yy < Stored_Sentence.length; yy++) {
+            Stored_Word = Stored_Sentence[yy].toLowerCase().split(""\\s+"");
+        }
+
+        sound_button.playsound();
+        error_counter=0;
+        Highlighter hilite = text.getHighlighter();
+        hilite.removeAllHighlights();
+
+        String input_string = text.getText();
+        //split the text into sentences
+        String[] input_sentence = input_string.split(""[\\s]*[-.,!?:)\""][\\s]*"");
+
+        for (i = 0; i < input_sentence.length; i++) {
+            //Split the sentences into words
+            String[] input_word = input_sentence[i].toLowerCase().split(""\\s+"");
+
+            for ( kk = 0; kk < input_word.length; kk++) {
+                //split the words into char
+                char[] chars = input_word[kk].toLowerCase().toCharArray();
+
+                for (int k = 0; k < chars.length; k++) {
+                    //Looking for first char of the word
+                    if (k == 0) {
+                        for (int aa = 0; aa < Alphabet.length; aa++) {
+                            if (chars[0] == Alphabet[aa]) {
+                                alphabet = Alphabet[aa];
+                                //path of stored_word files
+                                F1 = new File(""Words\\"" + Alphabet[aa] + "".docx"");
+                                Given_Word = input_word[kk];
+                                check_Correct_word(save_button);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //if any error remaining in Jtextarea disable save button
+        if(error_counter==0) {save_button.setEnabled(true);}
+        text.setEditable(true);
+
+        sound_button.playsound();
+
+        //Checking whether the text is not empty or not
+        if (text.getText().length() > 0) {
+
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+
+                    //Save file as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),text.getText());
+                    }
+
+                    //Save file as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),text.getText());
+
+                    } else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+
+                sound_button.playsound();
+            }
+        }
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+        
+    }",0
+"public void newClass(){
+        for(int i=0;i<10;i++){
+            System.out.println(i);
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+            if (n == JOptionPane.YES_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // save as pdf
+            else if (n == JOptionPane.NO_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // cancel
+            else {
+                sound_button.playsound();
+            }
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+    }",1
+"public void Code_Duplicate(){
+        if (n == JOptionPane.YES_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        // save as pdf
+        else if (n == JOptionPane.NO_OPTION) {
+            sound_button.playsound();
+            save_file save_file = new save_file();
+            save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+        }
+        // cancel
+        else {
+            sound_button.playsound();
+        }
+        for(int i=0;i<10;i++){
+            System.out.println(i);
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+            if (n == JOptionPane.YES_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // save as pdf
+            else if (n == JOptionPane.NO_OPTION) {
+                sound_button.playsound();
+                save_file save_file = new save_file();
+                save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+            }
+            // cancel
+            else {
+                sound_button.playsound();
+            }
+        }
+        if (result_textarea.getText().length() > 0) {
+            //write file name and choose directory
+            save_filename = JOptionPane.showInputDialog(""Write New File Name"");
+            savefile = new JFileChooser();
+            savefile.setDialogTitle(""Choose Directory"");
+            savefile.setSelectedFile(new File(save_filename));
+            int sf = savefile.showSaveDialog(null);
+            if (sf == JFileChooser.APPROVE_OPTION) {
+                sound_button.playsound();
+                // choose the file format
+                try {
+                    Object[] choices = {""Docx"", ""Pdf"", ""Cancel""};
+                    Object defaultChoice = choices[0];
+                    int n = JOptionPane.showOptionDialog(null, ""Select Format"", ""Format Choice"", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choices, defaultChoice);
+                    // save as docx
+                    if (n == JOptionPane.YES_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_docx(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // save as pdf
+                    else if (n == JOptionPane.NO_OPTION) {
+                        sound_button.playsound();
+                        save_file save_file = new save_file();
+                        save_file.save_as_pdf(savefile.getSelectedFile(),result_textarea.getText());
+                    }
+                    // cancel
+                    else {
+                        sound_button.playsound();
+                    }
+                } catch (Exception ee) {
+                    JOptionPane.showMessageDialog(null, ee);
+                }
+            } else {
+                sound_button.playsound();
+            }
+        }
+        // If there is no text in JTextArea. Warning Message .
+        else{
+            Object[] options = {""Ok""};
+            int n = JOptionPane.showOptionDialog(null, ""There is no text to save"", ""Warning"", JOptionPane.OK_OPTION, JOptionPane.NO_OPTION, null, options, options[0]);
+            if (n == JOptionPane.OK_OPTION) {
+                sound_button.playsound();
+            }
+        }
+    }",1
+"public void highComplexityMethod(int x, int y, int z, int a, int b, int c, int d, int e, int f) {
+        if (x > 0) { // +1
+            if (y > 0) { // +1
+                if (z > 0) { // +1
+                    System.out.println(""x, y, and z are positive"");
+                } else { // +1
+                    System.out.println(""z is not positive"");
+                }
+            } else if (z > 0) { // +1
+                System.out.println(""x and z are positive"");
+            } else { // +1
+                System.out.println(""x is positive, y and z are not"");
+            }
+        } else if (y > 0) { // +1
+            if (a > 0) { // +1
+                System.out.println(""y and a are positive"");
+            } else if (b > 0) { // +1
+                System.out.println(""y and b are positive"");
+            } else if (c > 0) { // +1
+                System.out.println(""y and c are positive"");
+            }  else { // +1
+                System.out.println(""Only y is positive"");
+            }
+        } else if (z > 0) { // +1
+            if (c > 0) { // +1
+                System.out.println(""z and c are positive"");
+            } else { // +1
+                System.out.println(""Only z is positive"");
+            }
+        } else { // +1
+            for (int i = 0; i < d; i++) { // +1
+                if (e > 0) { // +1
+                    if (f > 0) { // +1
+                        System.out.println(""e and f are positive"");
+                    } else { // +1
+                        System.out.println(""Only e is positive"");
+                    }
+                } else { // +1
+                    System.out.println(""Neither e nor f are positive"");
+                }
+            }
+        }
+
+        while (a > 0) { // +1
+            if (b > 0) { // +1
+                System.out.println(""a and b are positive"");
+            } else { // +1
+                break;
+            }
+            a--;
+        }
+    }",1
+"public static void gameDecision(int playerHealth, int enemyHealth, int playerMana, int enemyMana, int environment, int playerLevel, int enemyLevel) {
+        if (playerHealth <= 0) {
+            System.out.println(""Game Over. Player is dead."");
+        } else if (enemyHealth <= 0) {
+            System.out.println(""Victory! Enemy is dead."");
+        } else {
+            if (playerMana > 50) {
+                System.out.println(""Player casts a powerful spell!"");
+                enemyHealth -= 30;
+            } else if (playerMana > 20) {
+                System.out.println(""Player casts a moderate spell."");
+                enemyHealth -= 15;
+            } else {
+                System.out.println(""Player attacks with a basic strike."");
+                enemyHealth -= 5;
+            }
+
+            if (playerLevel > enemyLevel) {
+                System.out.println(""Player has a level advantage."");
+                enemyHealth -= 10;
+            } else if (playerLevel < enemyLevel) {
+                System.out.println(""Enemy has a level advantage."");
+                playerHealth -= 10;
+            } else {
+                System.out.println(""Both player and enemy are equally matched."");
+            }
+
+            switch (environment) {
+                case 1:
+                    System.out.println(""The environment is a forest. Players have increased agility."");
+                    playerHealth += 5;
+                    break;
+                case 2:
+                    System.out.println(""The environment is a desert. Players have decreased stamina."");
+                    playerHealth -= 5;
+                    break;
+                case 3:
+                    System.out.println(""The environment is a swamp. Movement is slow."");
+                    break;
+                case 4:
+                    System.out.println(""The environment is a mountain. Attack damage is increased."");
+                    enemyHealth -= 10;
+                    break;
+                case 5:
+                    System.out.println(""The environment is a cave. Defense is increased."");
+                    playerHealth += 5;
+                    break;
+                default:
+                    System.out.println(""The environment is neutral."");
+                    break;
+            }
+
+            while (enemyHealth > 0 && playerHealth > 0) {
+                if (enemyMana > 40) {
+                    System.out.println(""Enemy casts a devastating spell!"");
+                    playerHealth -= 25;
+                    enemyMana -= 40;
+                } else if (enemyMana > 10) {
+                    System.out.println(""Enemy casts a weak spell."");
+                    playerHealth -= 10;
+                    enemyMana -= 10;
+                } else {
+                    System.out.println(""Enemy attacks with a basic strike."");
+                    playerHealth -= 5;
+                }
+
+                if (playerHealth > 50) {
+                    System.out.println(""Player uses a health potion."");
+                    playerHealth += 20;
+                } else if (playerMana > 30) {
+                    System.out.println(""Player uses a mana potion."");
+                    playerMana += 20;
+                }
+
+                if (playerHealth <= 0) {
+                    System.out.println(""Player is dead."");
+                    break;
+                } else if (enemyHealth <= 0) {
+                    System.out.println(""Enemy is dead."");
+                    break;
+                }
+            }
+
+            if (playerHealth > 0 && enemyHealth > 0) {
+                System.out.println(""The battle continues..."");
+            } else if (playerHealth <= 0) {
+                System.out.println(""Game Over. The player was defeated."");
+            } else {
+                System.out.println(""Victory! The player defeated the enemy."");
+            }
+        }
+    }",1
+"public static void processOrder(int orderAmount, int customerLoyaltyPoints, String customerType, boolean isHolidaySeason, String shippingOption, String paymentMethod, int itemsCount) {
+        if (orderAmount <= 0) {
+            System.out.println(""Invalid order amount."");
+            return;
+        } else if (orderAmount > 10000) {
+            System.out.println(""Large order detected."");
+        }
+
+        if (customerLoyaltyPoints > 1000) {
+            System.out.println(""Loyalty discount applied."");
+            orderAmount -= 100;
+        }
+
+        if (isHolidaySeason) {
+            System.out.println(""Holiday season discount applied."");
+            orderAmount *= 0.9;
+        }
+
+        if (customerType.equals(""VIP"")) {
+            System.out.println(""VIP customer. Special discount applied."");
+            orderAmount *= 0.85;
+            if (shippingOption.equals(""overnight"")) {
+                System.out.println(""Free overnight shipping for VIPs."");
+            }
+        } else if (customerType.equals(""Regular"")) {
+            if (shippingOption.equals(""express"")) {
+                System.out.println(""Express shipping selected. Additional charge applied."");
+                orderAmount += 30;
+            } else if (shippingOption.equals(""standard"")) {
+                System.out.println(""Standard shipping selected."");
+            } else {
+                System.out.println(""Invalid shipping option. Defaulting to standard."");
+            }
+        } else if (customerType.equals(""New"")) {
+            System.out.println(""New customer discount applied."");
+            orderAmount *= 0.95;
+            if (paymentMethod.equals(""credit_card"")) {
+                System.out.println(""Credit card payment selected. Extra points awarded."");
+            } else if (paymentMethod.equals(""paypal"")) {
+                System.out.println(""PayPal payment selected."");
+            } else if (paymentMethod.equals(""gift_card"")) {
+                System.out.println(""Gift card payment selected. Gift card limit applied."");
+                if (orderAmount > 500) {
+                    System.out.println(""Gift card limit exceeded. Adjusting order amount."");
+                    orderAmount = 500;
+                }
+            } else {
+                System.out.println(""Invalid payment method. Defaulting to credit card."");
+            }
+        } else {
+            System.out.println(""Unrecognized customer type."");
+        }
+
+        switch (shippingOption) {
+            case ""standard"":
+                System.out.println(""Processing with standard shipping."");
+                break;
+            case ""express"":
+                System.out.println(""Processing with express shipping."");
+                orderAmount += 20;
+                break;
+            case ""overnight"":
+                System.out.println(""Processing with overnight shipping."");
+                orderAmount += 50;
+                break;
+            default:
+                System.out.println(""Invalid shipping option. Using standard shipping."");
+                break;
+        }
+
+        for (int i = 0; i < itemsCount; i++) {
+            if (i % 2 == 0) {
+                System.out.println(""Processing even item: "" + (i + 1));
+            } else {
+                System.out.println(""Processing odd item: "" + (i + 1));
+            }
+
+            if (i == itemsCount / 2) {
+                System.out.println(""Halfway through processing items."");
+            }
+
+            if (i > 0 && i % 10 == 0) {
+                System.out.println(""Milestone reached: Processed "" + i + "" items."");
+            }
+        }
+
+        if (orderAmount > 1000) {
+            System.out.println(""High order amount. Final verification required."");
+        } else if (orderAmount < 50) {
+            System.out.println(""Low order amount. Extra shipping charges apply."");
+            orderAmount += 10;
+        }
+
+        System.out.println(""Final order amount: $"" + orderAmount);
+    }",1
+"public void complexMethod(int a, int b, int c, int d) {
+        if (a > 0) {                       
+            if (b > 0) {                   
+                if (c > 0) {               
+                    System.out.println(""Case 1"");
+                } else {                   
+                    System.out.println(""Case 2"");
+                }
+            } else if (b < 0) {            
+                if (c == 0) {              
+                    System.out.println(""Case 3"");
+                } else if (c < 0){                   
+                    System.out.println(""C value is negative"");
+                } else if (c =5 ){                   
+                    System.out.println(""C value is 5"");
+                } else {                   
+                    System.out.println(""Case 4"");
+                }
+            } else {                       
+                System.out.println(""Case 5"");
+            }
+        } else if (a < 0) {                
+            if (d > 10) {                  
+                System.out.println(""Case 6"");
+            } else if (d < 5) {            
+                System.out.println(""Case 7"");
+            } else {                       
+                switch (b) {               
+                    case 1:                
+                        System.out.println(""Case 8"");
+                        break;
+                    case 2:                
+                        System.out.println(""Case 9"");
+                        break;
+                    case 3:                
+                        System.out.println(""Case 10"");
+                        break;
+                    default:               
+                        System.out.println(""Default Case"");
+                }
+            }
+        } else {                           
+            for (int i = 0; i < c; i++) {  
+                if (i  == 0) {          
+                    System.out.println(""Equal to zero"");
+                } else if (i < 0) {          
+                    System.out.println(""Negative"");
+                }  else {                   
+                    System.out.println(""Positive"");
+                }
+            }
+        }
+
+        try {                              
+            int result = a / b;
+            System.out.println(""Result: "" + result);
+        } catch (ArithmeticException e) {  
+            System.out.println(""Division by zero"");
+        }
+    }",1
+"public void actionPerformed(){
+        if(amounttext.getText().isEmpty() || interesttext.getText().isEmpty() ||  monthtext.getText().isEmpty() ){
+            JOptionPane.showMessageDialog(null,""Enter all value"");
+        }
+
+        else {
+            if(checkMonth()==true && checkLoan()==false && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Month input is invalid"");
+                monthtext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan input is invalid"");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest input is invalid"");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==true && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan & Month input is invalid"");
+                monthtext.setText("""");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==true && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest & Month input is invalid"");
+                monthtext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Loan & Interest input is invalid"");
+                amounttext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan input is invalid"");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest input is invalid"");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==true && checkLoan()==true && checkInterest()==false){
+                JOptionPane.showMessageDialog(null, ""Loan & Month input is invalid"");
+                monthtext.setText("""");
+                amounttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+            else if(amounttext.getText().isEmpty() || interesttext.getText().isEmpty() ||  monthtext.getText().isEmpty() ){
+                JOptionPane.showMessageDialog(null,""Enter all value"");
+            }
+
+            else if(checkMonth()==true && checkLoan()==false && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Interest & Month input is invalid"");
+                monthtext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else if(checkMonth()==false && checkLoan()==true && checkInterest()==true){
+                JOptionPane.showMessageDialog(null, ""Loan & Interest input is invalid"");
+                amounttext.setText("""");
+                interesttext.setText("""");
+                totaltext.setText("""");
+                paymenttext.setText("""");
+            }
+
+            else{
+                try {
+                    if(amounttext.getText().isEmpty() || interesttext.getText().isEmpty() ||  monthtext.getText().isEmpty() ){
+                        JOptionPane.showMessageDialog(null,""Enter all value"");
+                    }
+                    double totalamount = 0;
+                    double Loan_Amount = Double.parseDouble(amounttext.getText());
+                    double Interest_Rate = Double.parseDouble(interesttext.getText());
+                    double Month = Double.parseDouble(monthtext.getText());
+
+                    totalamount = Loan_Amount + Loan_Amount * Interest_Rate / 100;
+                    totaltext.setText(String.valueOf(totalamount));
+
+                    double payment_per_month = 0;
+                    payment_per_month = (totalamount / Month);
+                    paymenttext.setText(String.valueOf(payment_per_month));
+
+                    totaltext.setEnabled(true);
+                    paymenttext.setEnabled(true);
+                    totaltext.setEditable(false);
+                    paymenttext.setEditable(false);
+                }
+                catch (Exception e1){
+
+                    JOptionPane.showMessageDialog(null, ""your input is not valid"");
+                    totaltext.setText("""");
+                    paymenttext.setText("""");
+                    amounttext.setText("""");
+                    interesttext.setText("""");
+                    monthtext.setText("""");
+                }
+            }
+        }
+    
+    }",1
+"public void complexMethod(int a, int b, int c, boolean flag1, boolean flag2, boolean flag3) {
+    if (a > 10) { // 1
+        if (b > 5) { // 2
+            if (c < 20) { // 3
+                for (int i = 0; i < a; i++) { // 4
+                    if (i % 2 == 0) { // 5
+                        System.out.println(""Even i: "" + i);
+                    } else { 
+                        for (int j = 0; j < b; j++) { // 6
+                            if (j % 3 == 0) { // 7
+                                System.out.println(""j divisible by 3: "" + j);
+                            } else if (j % 5 == 0) { // 8
+                                System.out.println(""j divisible by 5: "" + j);
+                            } else { // 9
+                                System.out.println(""j is "" + j);
+                            }
+                        }
+                    }
+                }
+            } else if (c > 50) { // 10
+                switch (a) {
+                    case 1: System.out.println(""a is 1""); break; // 11
+                    case 2: System.out.println(""a is 2""); break; // 12
+                    case 3: System.out.println(""a is 3""); break; // 13
+                    default: System.out.println(""a is something else"");
+                }
+            } else { // 14
+                System.out.println(""c is between 20 and 50"");
+            }
+        } else { // 15
+            while (b < 100) { // 16
+                b++;
+                if (flag1 && flag2) { // 17
+                    System.out.println(""Both flags are true"");
+                } else if (flag1 || flag3) { // 18
+                    System.out.println(""One flag is true"");
+                }else if (flag1 || flag3) { // 18
+                    System.out.println(""One flag is true"");
+                }else if (flag1 || flag3) { // 18
+                    System.out.println(""One flag is true"");
+                } else { // 19
+                    System.out.println(""No flags are true"");
+                }
+                
+            }
+        }
+    } else { // 20
+        System.out.println(""a is 10 or less"");
+    }
+}",1
